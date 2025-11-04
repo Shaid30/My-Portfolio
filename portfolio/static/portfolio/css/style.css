@@ -282,10 +282,9 @@ body {
 }
 
 .image-caption {
-    margin-top: 10px;
-    font-size: 16px;
-    font-style: italic;
-    color: #555;
+    margin-top: 15px;
+    font-size: 30px;
+    color: #33abd3;
 }
 
 .about-image img:hover {

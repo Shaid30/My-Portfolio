@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2>
+                    AS
+                </h2>
+            </div>
+            <ul class=" nav-links">
+                <li><a href="{% url 'portfolio:home' %}"
+                        class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+                </li>
+                <li><a href="{% url 'portfolio:about' %}"
+                        class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+                </li>
+                <li><a href="{% url 'portfolio:projects' %}"
+                        class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a>
+                </li>
+                <li><a href="{% url 'portfolio:contact' %}"
+                        class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Abu Shaid. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

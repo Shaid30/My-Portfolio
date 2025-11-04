@@ -1,0 +1,53 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Home - My Portfolio{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-fade-in">Hello, I'm <span class=" highlight">Md. Abu Shaid</span></h1>
+                <h2 class="subtitle">Fresher | Django Enthusiast</h2>
+                <p class="hero-description">
+                    Welcome to my portfolio! I love building web applications and learning new technologies every day.
+
+                    Explore my work and let's create something great together.
+                </p>
+                <div class="cta-buttons">
+                    <a href="{% url 'portfolio:projects' %}" class="btn btn-primary">View Projects</a>
+                    <a href="{% url 'portfolio:contact' %}" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-pic">
+                    <img src="{% static 'portfolio/images/shaid 03.jpg'%}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills-section">
+    <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Backend Development</p>
+            </div>
+            <div class="skill-card">
+                <h3>Django</h3>
+                <p>Web Framework</p>
+            </div>
+            <div class="skill-card">
+                <h3>HTML/CSS</h3>
+                <p>Frontend Design</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Interactivity</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

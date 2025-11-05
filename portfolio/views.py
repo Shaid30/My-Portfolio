@@ -1,12 +1,6 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'portfolio/home.html')
-
-def about(request):
-    return render(request, 'portfolio/about.html')
-
-def projects(request):
     projects_list = [
         {
             'title': 'E-commerce Website',
@@ -24,7 +18,13 @@ def projects(request):
             'tech': 'Django, SQLite, JavaScript'
         },
     ]
-    return render(request, 'portfolio/projects.html', {'projects': projects_list})
+    return render(request, 'portfolio/home.html', {'projects': projects_list})
+
+def about(request):
+    return render(request, 'portfolio/about.html')
+
+def projects(request):
+    return render(request, 'portfolio/projects.html')
 
 def contact(request):
     return render(request, 'portfolio/contact.html')

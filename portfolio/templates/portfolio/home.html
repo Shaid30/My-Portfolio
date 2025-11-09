@@ -7,7 +7,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="animate-fade-in">Hello, I'm <span class=" highlight">Md. Abu Shaid</span></h1>
-                <h2 class="subtitle">Fresher | Django Enthusiast</h2>
+                <h2 class="subtitle" id="typing-text"></h2>
                 <p class=" hero-description">
                     Welcome to my portfolio! I love building web applications and learning new technologies every
                     day.
@@ -15,8 +15,8 @@
                     Explore my work and let's create something great together.
                 </p>
                 <div class="cta-buttons">
-                    <a href="{% url 'portfolio:projects' %}" class="btn btn-primary">View Projects</a>
-                    <a href="{% url 'portfolio:contact' %}" class="btn btn-secondary">Contact Me</a>
+                    <a href="http://127.0.0.1:8000/#projects" class=" btn btn-primary">View Projects</a>
+                    <a href="http://127.0.0.1:8000/#contact" class=" btn btn-secondary">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -58,7 +58,7 @@
 
         <div class="about-content">
             <div class="about-image">
-                <img src="{% static 'portfolio/images/shaid05.png'%}" alt="About Me"><br>
+                <img src="{% static 'portfolio/images/shaid05.png'%}" class="slide-photos"><br>
                 <h1 class="image-caption">Code. Learn. Build. Repeat. <br>Building my dreams, one line of code at a
                     time.
                 </h1>
@@ -167,7 +167,6 @@
                     </div>
                 </div>
             </div>
-
             <div class=" contact-form">
                 <h2>Send a Message</h2>
                 <form>
@@ -187,6 +186,8 @@
                     <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                 </form>
             </div>
+
+
         </div>
     </div>
 </section>

@@ -39,6 +39,23 @@
             <p>&copy; 2025 Abu Shaid. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const text = "Fresher Django Enthusiast";
+        const typing = document.getElementById("typing-text");
+        let i = 0;
+
+        function typeEffect() {
+            if (i < text.length) {
+                typing.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100); // এখানে গতি নিয়ন্ত্রণ করা যায়
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+
 </body>
 
 </html>

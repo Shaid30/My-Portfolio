@@ -125,7 +125,20 @@ body {
     font-weight: 400;
     margin-bottom: 1.5rem;
     opacity: 0.9;
+    color: #4f46e5;
+    white-space: nowrap;
+    border-right: 3px solid #4f46e5;
+    width: fit-content;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
 }
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
 .hero-description {
     font-size: 1.1rem;
@@ -469,6 +482,7 @@ body {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
+
 }
 
 .info-item {

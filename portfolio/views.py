@@ -3,19 +3,22 @@ from django.shortcuts import render
 def home(request):
     projects_list = [
         {
-            'title': 'E-commerce Website',
-            'description': 'A fully functional online shopping platform built with Django',
-            'tech': 'Django, PostgreSQL, Bootstrap'
+            'title': 'Tourism Website',
+            'description': 'Coming this project very soon ',
+            'tech': 'Python, Django, Javascript',
+            'github':"https://github.com/Shaid30/Tourism-website-.git"
         },
         {
             'title': 'Weather App',
             'description': 'Real-time weather forecast application using API integration',
-            'tech': 'Python, API, HTML/CSS'
+            'tech': 'Python, API, HTML/CSS',
+            
         },
         {
-            'title': 'Task Manager',
-            'description': 'A todo list application with user authentication',
-            'tech': 'Django, SQLite, JavaScript'
+            'title': 'Todo App',
+            'description': 'A  simple todo app only add and delete',
+            'tech': 'Django, Bootstrap, JavaScript',
+            'github':"https://github.com/Shaid30/todo-app.git"
         },
     ]
     return render(request, 'portfolio/home.html', {'projects': projects_list})

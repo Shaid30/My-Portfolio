@@ -507,15 +507,18 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: 4px;
 }
 
-.social-icon {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
+.social-icon i {
+    background: linear-gradient(to right, var(--accent-color), #dfb64f);
+    color: rgb(58, 53, 53);
+    padding: 0.4rem 1.0rem;
+    border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 35px;
+    padding-left: 5px;
 }
 
 .social-icon:hover {
